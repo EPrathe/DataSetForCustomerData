@@ -1,0 +1,32 @@
+@mixin row-mixin {
+  margin: 0;
+  padding: 1rem;
+  border-right: 1px solid black;
+}
+
+.App {
+  text-align: center;
+}
+
+Table {
+  margin: 1rem 2rem 1rem 2rem;
+  border-spacing: 0;
+  width: 95%;
+  border: 1px solid black;
+  th {
+    @include row-mixin;
+    border-bottom: 3px solid #77787B;;
+    background-color: #0076BC;
+    color: white;
+  }
+  th:hover{
+    color: black;
+  }
+
+  td {
+   @include row-mixin;
+   border-bottom: 1px solid black;
+  } 
+}
+
+
